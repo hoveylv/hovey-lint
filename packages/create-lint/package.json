@@ -1,0 +1,21 @@
+{
+  "name": "@hovey/create-lint",
+  "version": "1.0.0",
+  "description": "lint cli",
+  "author": "hoveylv <hovey.lv@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hoveylv/hovey-lint",
+  "main": "index.js",
+  "bin": {
+    "create-lint": "index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@antfu/install-pkg": "^0.1.0",
+    "fs-extra": "^10.1.0",
+    "kolorist": "^1.5.1",
+    "prompts": "^2.4.2"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@hovey/eslint-config-vue",
+  "version": "1.0.0",
+  "description": "eslint vue",
+  "author": "hoveylv <hovey.lv@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hoveylv/hovey-lint",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "prettier": ">=2.0.0"
+  },
+  "dependencies": {
+    "@hovey/eslint-config-typescript": "workspace:*",
+    "eslint-plugin-vue": "^9.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "prettier": "^2.7.1"
+  }
+}

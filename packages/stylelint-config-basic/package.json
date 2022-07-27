@@ -1,0 +1,33 @@
+{
+  "name": "@hovey/stylelint-config-basic",
+  "version": "1.0.0",
+  "description": "stylelint basic",
+  "author": "hoveylv <hovey.lv@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hoveylv/hovey-lint",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "postcss": ">=8.0.0",
+    "prettier": ">=2.0.0",
+    "stylelint": ">=14.0.0"
+  },
+  "dependencies": {
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.4",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1"
+  }
+}
