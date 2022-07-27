@@ -1,0 +1,4 @@
+{
+  "extends": "@hovey/eslint-config-basic",
+  "plugins": ["hovey"]
+}

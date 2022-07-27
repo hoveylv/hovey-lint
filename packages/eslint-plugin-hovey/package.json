@@ -1,0 +1,31 @@
+{
+  "name": "eslint-plugin-hovey",
+  "version": "1.0.0",
+  "description": "eslint hovey",
+  "author": "hoveylv <hovey.lv@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hoveylv/hovey-lint",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "file": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest",
+    "prepublishOnly": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^5.31.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "unbuild": "^0.7.6",
+    "vitest": "^0.19.1"
+  }
+}

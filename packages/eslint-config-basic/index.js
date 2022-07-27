@@ -32,7 +32,7 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  plugins: ['html', 'unicorn'],
+  plugins: ['html', 'unicorn', 'hovey'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -323,5 +323,8 @@ module.exports = {
     // yml
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
     'yml/no-empty-document': 'off',
+
+    // hovey
+    'hovey/import-dedupe': 'error',
   },
 }
