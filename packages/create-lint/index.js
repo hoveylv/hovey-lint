@@ -3,7 +3,7 @@
 const path = require('path')
 const prompts = require('prompts')
 const fs = require('fs-extra')
-const { blue } = require('kolorist')
+const { blue, red } = require('kolorist')
 const { installPackage, detectPackageManager } = require('@antfu/install-pkg')
 
 async function main() {
@@ -54,33 +54,13 @@ async function main() {
         { title: 'release-it', value: ['release-release-it'] },
       ],
     },
-    {
-      type: 'select',
-      name: 'test',
-      message: 'Pick a test preset',
-      choices: [
-        { title: 'none', value: [] },
-        { title: 'vitest-vue', value: ['test-jest-vue'] },
-        { title: 'jest-vue', value: ['test-jest-vue'] },
-        { title: 'jest-react', value: ['test-jest-react'] },
-      ],
-    },
-    {
-      type: 'multiselect',
-      name: 'files',
-      message: 'Pick files preset',
-      hint: 'Space to select. Return to submit',
-      choices: [
-        { title: '.editorconfig', value: 'file-basic/editorconfig' },
-        { title: '.gitignore', value: 'file-basic/gitignore' },
-        { title: '.npmrc', value: 'file-basic/npmrc' },
-      ],
-    },
   ])
 
   // 获取默认配置
   const tplPath = path.resolve(__dirname, 'template')
+
   const results = Object.values(options.result).flat()
+
   const configs = results.map(configPath => {
     const config = require(path.resolve(tplPath, configPath, 'config.js'))
     return config(options)
@@ -103,9 +83,13 @@ async function main() {
   const configFiles = Array.from(new Set(configs.map(config => config.configFile).flat()))
   await Promise.all(
     configFiles.map(configFile =>
-      fs.copyFile(
+      fs.copy(
         path.resolve(tplPath, configFile),
-        path.resolve(options.cwd, configFile.slice(configFile.indexOf('/') + 1))
+        path.resolve(options.cwd, configFile.slice(configFile.indexOf('/') + 1)),
+        { recursive: true },
+        err => {
+          if (err) console.log(red(err))
+        }
       )
     )
   )

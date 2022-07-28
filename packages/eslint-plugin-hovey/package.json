@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-hovey",
   "version": "1.0.0",
-  "description": "eslint hovey",
+  "description": "eslint plugin hovey",
   "author": "hoveylv <hovey.lv@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/hoveylv/hovey-lint",

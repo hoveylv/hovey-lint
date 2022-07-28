@@ -1,6 +1,6 @@
 {
   "name": "@hovey/create-lint",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "lint cli",
   "author": "hoveylv <hovey.lv@qq.com>",
   "license": "MIT",
@@ -8,6 +8,9 @@
   "main": "index.js",
   "bin": {
     "create-lint": "index.js"
+  },
+  "engines": {
+    "node": ">=16.16"
   },
   "publishConfig": {
     "access": "public"
