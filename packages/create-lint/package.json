@@ -1,6 +1,6 @@
 {
   "name": "@hovey/create-lint",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "lint cli",
   "author": "hoveylv <hovey.lv@qq.com>",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@hovey/eslint-config-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "eslint react",
   "author": "hoveylv <hovey.lv@qq.com>",
   "license": "MIT",
